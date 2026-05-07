@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Northward Spirits Co. — Premium B2B Distribution · Vancouver & Toronto</title>
+<meta name="description" content="Wholesale spirits, gin, vodka, craft & wine distribution for hotels, restaurants and retailers across BC and ON." />
+<meta property="og:title" content="Northward Spirits Co. — B2B Distribution" />
+<meta property="og:description" content="Crafting excellence, distributed with integrity. Vancouver · Toronto." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" />
+<style>
+:root{
+  --background:oklch(0.16 0.01 250);
+  --foreground:oklch(0.96 0.005 100);
+  --card:oklch(0.20 0.012 250);
+  --muted-foreground:oklch(0.70 0.015 250);
+  --border:oklch(1 0 0 / 8%);
+  --copper:oklch(0.68 0.14 52);
+  --copper-glow:oklch(0.78 0.16 62);
+  --gradient-hero:radial-gradient(120% 80% at 70% 40%, oklch(0.28 0.04 50 / 0.55), transparent 60%), linear-gradient(180deg, oklch(0.12 0.01 250), oklch(0.18 0.012 250));
+  --gradient-copper:linear-gradient(135deg, var(--copper) 0%, var(--copper-glow) 100%);
+  --gradient-glass:linear-gradient(135deg, oklch(1 0 0 / 0.06), oklch(1 0 0 / 0.01));
+  --shadow-elegant:0 30px 60px -20px oklch(0 0 0 / 0.6);
+  --shadow-copper:0 20px 50px -20px oklch(0.65 0.13 50 / 0.45);
+  --font-display:"Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-sans:"Inter", ui-sans-serif, system-ui, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;border:0 solid var(--border)}
+html{scroll-behavior:smooth}
+body{background:var(--background);color:var(--foreground);font-family:var(--font-sans);-webkit-font-smoothing:antialiased;line-height:1.5;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,.font-display{font-family:var(--font-display);letter-spacing:-0.01em;font-weight:500}
+.container{max-width:1280px;margin:0 auto;padding:0 24px}
+@media(min-width:1024px){.container{padding:0 40px}}
+.copper{color:var(--copper)}
+.copper-text{background:var(--gradient-copper);-webkit-background-clip:text;background-clip:text;color:transparent}
+.muted{color:var(--muted-foreground)}
+.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:0.4em;color:var(--copper);margin-bottom:24px}
+.hairline{height:1px;background:linear-gradient(90deg,transparent,oklch(1 0 0 / 0.18),transparent)}
+.glass{background:var(--gradient-glass);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);border:1px solid oklch(1 0 0 / 0.08)}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 32px;font-size:13px;text-transform:uppercase;letter-spacing:0.25em;transition:all .5s}
+.btn-primary{background:var(--copper);color:oklch(0.14 0.01 250);box-shadow:var(--shadow-copper)}
+.btn-primary:hover{background:var(--copper-glow)}
+.btn-ghost{border:1px solid var(--border)}
+.btn-ghost:hover{border-color:var(--foreground)}
+
+/* NAV */
+header.nav{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(8px);background:oklch(0.16 0.01 250 / 0.6)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
+.logo{display:flex;align-items:center;gap:8px}
+.logo-mark{height:32px;width:32px;border-radius:2px;background:var(--gradient-copper);box-shadow:var(--shadow-copper)}
+.logo-text{font-family:var(--font-display);font-size:18px;letter-spacing:.04em}
+.logo-sub{font-size:10px;text-transform:uppercase;letter-spacing:.3em;color:var(--muted-foreground)}
+.nav-links{display:none;gap:40px;font-size:14px;color:var(--muted-foreground)}
+.nav-links a:hover{color:var(--foreground)}
+@media(min-width:768px){.nav-links{display:flex}}
+.nav-cta{font-size:11px;text-transform:uppercase;letter-spacing:.25em;padding:12px 20px;border:1px solid var(--border)}
+.nav-cta:hover{border-color:var(--copper);color:var(--copper)}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;overflow:hidden;background:var(--gradient-hero)}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{position:absolute;right:0;top:0;height:100%;width:55%;object-fit:cover;opacity:.9}
+.hero-fade{position:absolute;inset:0;background:linear-gradient(to right,var(--background),oklch(0.16 0.01 250 / 0.85),transparent)}
+.hero-content{position:relative;padding:160px 0 96px;max-width:640px}
+.hero h1{font-size:clamp(48px,8vw,96px);line-height:.95}
+.hero h1 em{font-style:normal}
+.hero p{margin-top:32px;font-size:18px;color:var(--muted-foreground);max-width:560px}
+.hero-ctas{margin-top:48px;display:flex;flex-wrap:wrap;gap:16px}
+.stats{margin-top:80px;display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:440px}
+.stat-n{font-family:var(--font-display);font-size:30px}
+.stat-l{font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:var(--muted-foreground);margin-top:8px}
+
+/* SECTIONS */
+section.block{padding:128px 0}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:80px}
+.section-head h2{font-size:clamp(36px,5vw,60px);max-width:640px}
+.section-head p{color:var(--muted-foreground);max-width:400px}
+
+/* VALUE PROPS */
+.bento{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)}
+@media(max-width:768px){.bento{grid-template-columns:1fr}}
+.bento-cell{background:var(--background);padding:48px;transition:background .5s}
+.bento-cell:hover{background:var(--card)}
+.bento-cell .num{font-family:var(--font-display);color:var(--copper);font-size:14px;letter-spacing:.3em;margin-bottom:40px}
+.bento-cell h3{font-size:28px;margin-bottom:20px}
+
+/* COLLECTIONS */
+.alt{background:oklch(0.13 0.01 250)}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+@media(max-width:1024px){.products{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.products{grid-template-columns:1fr}}
+.product{cursor:pointer}
+.product-img{position:relative;overflow:hidden;background:oklch(0.10 0.005 250);aspect-ratio:3/4}
+.product-img img{position:absolute;inset:0;height:100%;width:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.22,1,.36,1)}
+.product:hover .product-img img{transform:scale(1.05)}
+.product-cat{position:absolute;top:16px;left:16px;font-size:10px;text-transform:uppercase;letter-spacing:.3em;background:oklch(0.16 0.01 250 / 0.4);backdrop-filter:blur(8px);padding:6px 12px;border:1px solid oklch(1 0 0 / 0.12);border-radius:2px}
+.product h3{font-size:20px;margin-top:24px}
+.product .tier{font-size:12px;color:var(--muted-foreground);margin-top:8px;letter-spacing:.02em}
+
+/* PORTAL */
+.portal-grid{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
+@media(max-width:1024px){.portal-grid{grid-template-columns:1fr;gap:64px}}
+.portal-grid h2{font-size:clamp(36px,5vw,60px);line-height:1.05}
+.benefits{margin-top:48px;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border)}
+.benefit{background:var(--background);padding:24px}
+.benefit .num{color:var(--copper);font-family:var(--font-display);margin-bottom:8px}
+.benefit-t{font-family:var(--font-display);font-size:18px;margin-bottom:8px}
+.benefit p{font-size:14px;color:var(--muted-foreground)}
+.dash{border-radius:8px;padding:24px;box-shadow:var(--shadow-elegant)}
+.dash-head{display:flex;justify-content:space-between;font-size:12px;color:var(--muted-foreground);margin-bottom:24px}
+.dot{height:8px;width:8px;border-radius:50%;background:var(--copper);display:inline-block;margin-right:8px}
+.dash-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+.dash-stat{border-radius:4px;padding:16px}
+.dash-stat-l{font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:var(--muted-foreground)}
+.dash-stat-v{font-family:var(--font-display);font-size:24px;margin-top:8px}
+.dash-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;font-size:14px;padding:12px 0;border-top:1px solid var(--border)}
+.dash-row .c2{color:var(--muted-foreground)}
+.dash-row .c3{color:var(--copper);text-align:right}
+.portal-bg{position:absolute;inset:0;opacity:.5;background:radial-gradient(60% 60% at 80% 30%, oklch(0.65 0.13 50 / 0.18), transparent 70%)}
+
+/* NETWORK */
+.nodes{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border)}
+@media(max-width:1024px){.nodes{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.nodes{grid-template-columns:1fr}}
+.node{background:var(--background);padding:32px}
+.node .pulse{height:8px;width:8px;border-radius:50%;background:oklch(0.70 0.015 250 / 0.4);margin-bottom:24px}
+.node.primary .pulse{background:var(--copper);box-shadow:0 0 12px var(--copper)}
+.node-c{font-family:var(--font-display);font-size:20px}
+.node-r{font-size:14px;color:var(--muted-foreground);margin-top:8px}
+.node-s{font-size:10px;text-transform:uppercase;letter-spacing:.3em;color:var(--copper);margin-top:24px}
+.pillars{margin-top:96px;display:grid;grid-template-columns:repeat(3,1fr);gap:48px;font-size:14px}
+@media(max-width:768px){.pillars{grid-template-columns:1fr}}
+.pillar-t{color:var(--copper);text-transform:uppercase;letter-spacing:.3em;font-size:11px;margin-bottom:12px}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border)}
+.foot{padding:64px 0;display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px}
+@media(max-width:768px){.foot{grid-template-columns:1fr}}
+.foot h4{font-family:var(--font-display);font-size:24px}
+.foot p,.foot .addr{font-size:14px;color:var(--muted-foreground);margin-top:16px;max-width:360px}
+.foot .label{font-size:10px;text-transform:uppercase;letter-spacing:.3em;color:var(--muted-foreground);margin-bottom:16px}
+.foot .addr{color:var(--foreground);margin-top:0}
+.foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;font-size:12px;color:var(--muted-foreground);padding-bottom:32px}
+.foot-links{display:flex;gap:24px}
+.foot-links a:hover{color:var(--foreground)}
+
+/* Reveal animation */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,1,.36,1), transform .9s cubic-bezier(.22,1,.36,1)}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#" class="logo">
+      <div class="logo-mark"></div>
+      <div>
+        <div class="logo-text">NORTHWARD</div>
+        <div class="logo-sub">Spirits Co.</div>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="#collections">Collections</a>
+      <a href="#wholesale">Wholesale</a>
+      <a href="#portal">B2B Portal</a>
+      <a href="#network">Network</a>
+    </nav>
+    <a href="#portal" class="nav-cta">Trade Login</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg">
+    <img src="assets/hero.jpg" alt="Premium spirit bottle in cinematic light" />
+    <div class="hero-fade"></div>
+  </div>
+  <div class="container hero-content reveal">
+    <div style="display:flex;align-items:center;gap:12px;font-size:12px;text-transform:uppercase;letter-spacing:.4em;color:var(--copper);margin-bottom:32px">
+      <span style="height:1px;width:40px;background:var(--copper)"></span> Vancouver · Toronto
+    </div>
+    <h1>Crafting <em class="copper-text">excellence</em>,<br />distributed with integrity.</h1>
+    <p>A premium spirits house supplying hotels, restaurants and boutique retailers from coast to coast — anchored in British Columbia, expanding through Ontario.</p>
+    <div class="hero-ctas">
+      <a href="#portal" class="btn btn-primary">Open trade account →</a>
+      <a href="#collections" class="btn btn-ghost">Explore collections</a>
+    </div>
+    <div class="stats">
+      <div><div class="stat-n">240+</div><div class="stat-l">Trade partners</div></div>
+      <div><div class="stat-n">2</div><div class="stat-l">Distribution hubs</div></div>
+      <div><div class="stat-n">48h</div><div class="stat-l">BC & ON delivery</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="wholesale" class="block">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">The proposition</div>
+        <h2>Built for the trade.</h2>
+      </div>
+      <p>Three pillars that turn casual orders into long-standing partnerships across the hospitality industry.</p>
+    </div>
+    <div class="bento">
+      <div class="bento-cell reveal"><div class="num">01</div><h3>Wholesale Excellence</h3><p class="muted">Tiered volume pricing engineered for hotel groups, restaurants and independent retailers. Premium margins, predictable terms.</p></div>
+      <div class="bento-cell reveal"><div class="num">02</div><h3>Direct Supply Chain</h3><p class="muted">Distillery-to-dock logistics. No middlemen, no markup creep — every bottle traceable from collection to customer venue.</p></div>
+      <div class="bento-cell reveal"><div class="num">03</div><h3>North American Logistics</h3><p class="muted">Bonded warehousing in Vancouver and Toronto. Same-week fulfillment across BC & ON, weekly cross-border service.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="collections" class="block alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Featured collections</div>
+        <h2>Four houses, <em class="copper-text" style="font-style:normal">one standard</em>.</h2>
+      </div>
+    </div>
+    <div class="products">
+      <article class="product reveal"><div class="product-img"><img src="assets/product-vodka.jpg" alt="Polar Reserve Vodka" loading="lazy"/><div class="product-cat">Vodka</div></div><h3>Polar Reserve</h3><p class="tier">Premium · Craft</p></article>
+      <article class="product reveal"><div class="product-img"><img src="assets/product-gin.jpg" alt="Coastline Botanical Gin" loading="lazy"/><div class="product-cat">Gin</div></div><h3>Coastline Botanical</h3><p class="tier">Small-batch · BC</p></article>
+      <article class="product reveal"><div class="product-img"><img src="assets/product-craft.jpg" alt="Cask No. 7 Craft Spirit" loading="lazy"/><div class="product-cat">Craft Spirits</div></div><h3>Cask No. 7</h3><p class="tier">Limited · Expression</p></article>
+      <article class="product reveal"><div class="product-img"><img src="assets/product-wine.jpg" alt="Okanagan Estate Reserve" loading="lazy"/><div class="product-cat">Wine</div></div><h3>Okanagan Estate</h3><p class="tier">Reserve · Curated</p></article>
+    </div>
+    <div style="margin-top:80px;text-align:center">
+      <a href="#portal" style="display:inline-flex;align-items:center;gap:12px;font-size:13px;text-transform:uppercase;letter-spacing:.3em;color:var(--muted-foreground)">
+        <span style="height:1px;width:40px;background:currentColor"></span> Request full pricebook (PDF) <span style="height:1px;width:40px;background:currentColor"></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="portal" class="block" style="position:relative;overflow:hidden">
+  <div class="portal-bg"></div>
+  <div class="container portal-grid" style="position:relative">
+    <div class="reveal">
+      <div class="eyebrow">Partner Portal</div>
+      <h2>A trade portal built for operators, not browsers.</h2>
+      <p style="margin-top:32px;font-size:18px;color:var(--muted-foreground);max-width:520px">Sign in once to manage your venues, replenishments, custom labels and invoices — with concierge support 24/7.</p>
+      <div class="benefits">
+        <div class="benefit"><div class="num">01</div><div class="benefit-t">Bulk Order System</div><p>Configure pallets, mix-and-match SKUs, schedule recurring deliveries.</p></div>
+        <div class="benefit"><div class="num">02</div><div class="benefit-t">Custom Labeling</div><p>Private-label runs for hotel groups & restaurant brands from 240 bottles.</p></div>
+        <div class="benefit"><div class="num">03</div><div class="benefit-t">Tax-Exempt Workflow</div><p>Streamlined exemption upload for licensed venues across BC & ON.</p></div>
+        <div class="benefit"><div class="num">04</div><div class="benefit-t">24/7 Logistics Tracking</div><p>Live shipment telemetry — temperature, ETA, customs status.</p></div>
+      </div>
+    </div>
+    <div class="reveal" style="position:relative">
+      <div class="dash glass">
+        <div class="dash-head">
+          <div><span class="dot"></span>northward.trade / dashboard</div>
+          <span>Fairmont Pacific Rim</span>
+        </div>
+        <div class="dash-stats">
+          <div class="dash-stat glass"><div class="dash-stat-l">MTD orders</div><div class="dash-stat-v">$48,210</div></div>
+          <div class="dash-stat glass"><div class="dash-stat-l">Open POs</div><div class="dash-stat-v">12</div></div>
+          <div class="dash-stat glass"><div class="dash-stat-l">In transit</div><div class="dash-stat-v">3 trucks</div></div>
+        </div>
+        <div>
+          <div class="dash-row"><div>Polar Reserve Vodka · 240 btls</div><div class="c2">Vancouver → Whistler</div><div class="c3">Out for delivery</div></div>
+          <div class="dash-row"><div>Coastline Gin · 96 btls</div><div class="c2">Toronto DC → Yorkville</div><div class="c3">Customs cleared</div></div>
+          <div class="dash-row"><div>Cask No. 7 · Custom label</div><div class="c2">Production · run 042</div><div class="c3">Bottling 78%</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="network" class="block alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">The network</div>
+        <h2>From Vancouver HQ to a new home in Toronto.</h2>
+        <p style="margin-top:24px;color:var(--muted-foreground);max-width:520px">Two coasts. Five operational nodes. One uncompromising standard for handling, temperature control and on-time delivery.</p>
+      </div>
+    </div>
+    <div class="nodes">
+      <div class="node primary reveal"><div class="pulse"></div><div class="node-c">Vancouver, BC</div><div class="node-r">Headquarters · Distillery</div><div class="node-s">Est. 2014</div></div>
+      <div class="node primary reveal"><div class="pulse"></div><div class="node-c">Toronto, ON</div><div class="node-r">Eastern Distribution Hub</div><div class="node-s">New · 2025</div></div>
+      <div class="node reveal"><div class="pulse"></div><div class="node-c">Calgary, AB</div><div class="node-r">Partner Warehouse</div><div class="node-s">Lane 02</div></div>
+      <div class="node reveal"><div class="pulse"></div><div class="node-c">Montréal, QC</div><div class="node-r">Cross-dock</div><div class="node-s">Lane 04</div></div>
+      <div class="node reveal"><div class="pulse"></div><div class="node-c">Seattle, WA</div><div class="node-r">US Cross-Border</div><div class="node-s">Lane 07</div></div>
+    </div>
+    <div class="pillars">
+      <div><div class="pillar-t">Compliance</div><p class="muted">BC LDB · AGCO licensed · SCC bonded carrier network.</p></div>
+      <div><div class="pillar-t">Sustainability</div><p class="muted">98% glass recycled · carbon-tracked routing · returnable case program.</p></div>
+      <div><div class="pillar-t">Service</div><p class="muted">Dedicated account director · 24/7 trade hotline · SLA-backed delivery.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot">
+      <div>
+        <h4>Northward Spirits Co.</h4>
+        <p>Premium production & wholesale distribution. Vancouver · Toronto. Please drink responsibly. 19+ in BC, 19+ in ON.</p>
+      </div>
+      <div>
+        <div class="label">Vancouver HQ</div>
+        <div class="addr">1240 Granville St<br/>Vancouver, BC V6Z 1M4<br/>+1 604 555 0140</div>
+      </div>
+      <div>
+        <div class="label">Toronto Office</div>
+        <div class="addr">88 Queens Quay E, Suite 1100<br/>Toronto, ON M5E 0A6<br/>+1 416 555 0188</div>
+      </div>
+    </div>
+    <div class="hairline" style="margin:32px 0"></div>
+    <div class="foot-bottom">
+      <div>© 2026 Northward Spirits Co. All rights reserved.</div>
+      <div class="foot-links">
+        <a href="#">Trade terms</a><a href="#">Privacy</a><a href="#">Responsibility</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
