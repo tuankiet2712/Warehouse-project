@@ -97,7 +97,7 @@ section.block{padding:128px 0}
 .product-img{position:relative;overflow:hidden;background:oklch(0.10 0.005 250);aspect-ratio:3/4}
 .product-img img{position:absolute;inset:0;height:100%;width:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.22,1,.36,1)}
 .product:hover .product-img img{transform:scale(1.05)}
-.product-cat{position:absolute;top:16px;left:16px;font-size:10px;text-transform:uppercase;letter-spacing:.3em;background:oklch(0.16 0.01 250 / 0.4);backdrop-filter:blur(8px);padding:6px 12px;border:1p[...]
+.product-cat{position:absolute;top:16px;left:16px;font-size:10px;text-transform:uppercase;letter-spacing:.3em;background:oklch(0.16 0.01 250 / 0.4);backdrop-filter:blur(8px);padding:6px 12px;border:1px solid var(--border)}
 .product h3{font-size:20px;margin-top:24px}
 .product .tier{font-size:12px;color:var(--muted-foreground);margin-top:8px;letter-spacing:.02em}
 
@@ -176,7 +176,7 @@ footer{border-top:1px solid var(--border)}
 
 <section class="hero">
   <div class="hero-bg">
-    <img src="northward-spirits-html/assets/hero.jpg" alt="Premium spirit bottle in cinematic light" />
+    <img src="assets/hero.jpg" alt="Premium spirit bottle in cinematic light" />
     <div class="hero-fade"></div>
   </div>
   <div class="container hero-content reveal">
@@ -207,9 +207,9 @@ footer{border-top:1px solid var(--border)}
       <p>Three pillars that turn casual orders into long-standing partnerships across the hospitality industry.</p>
     </div>
     <div class="bento">
-      <div class="bento-cell reveal"><div class="num">01</div><h3>Wholesale Excellence</h3><p class="muted">Tiered volume pricing engineered for hotel groups, restaurants and independent retailers. Pr[...]
-      <div class="bento-cell reveal"><div class="num">02</div><h3>Direct Supply Chain</h3><p class="muted">Distillery-to-dock logistics. No middlemen, no markup creep — every bottle traceable from c[...]
-      <div class="bento-cell reveal"><div class="num">03</div><h3>North American Logistics</h3><p class="muted">Bonded warehousing in Vancouver and Toronto. Same-week fulfillment across BC & ON, weekl[...]
+      <div class="bento-cell reveal"><div class="num">01</div><h3>Wholesale Excellence</h3><p class="muted">Tiered volume pricing engineered for hotel groups, restaurants and independent retailers. Predictable margins, transparent contracts.</p><div class="hairline" style="margin-top:40px;opacity:.5"></div></div>
+      <div class="bento-cell reveal"><div class="num">02</div><h3>Direct Supply Chain</h3><p class="muted">Distillery-to-dock logistics. No middlemen, no markup creep — every bottle traceable from cask to receiving bay.</p><div class="hairline" style="margin-top:40px;opacity:.5"></div></div>
+      <div class="bento-cell reveal"><div class="num">03</div><h3>North American Logistics</h3><p class="muted">Bonded warehousing in Vancouver and Toronto. Same-week fulfillment across BC & ON, weekly cross-border lanes.</p><div class="hairline" style="margin-top:40px;opacity:.5"></div></div>
     </div>
   </div>
 </section>
@@ -223,10 +223,10 @@ footer{border-top:1px solid var(--border)}
       </div>
     </div>
     <div class="products">
-      <article class="product reveal"><div class="product-img"><img src="northward-spirits-html/assets/product-craft.jpg" alt="Polar Reserve Vodka" loading="lazy"/><div class="product-cat">Vodka</div>[...]
-      <article class="product reveal"><div class="product-img"><img src="northward-spirits-html/assets/product-gin.jpg" alt="Coastline Botanical Gin" loading="lazy"/><div class="product-cat">Gin</div>[...]
-      <article class="product reveal"><div class="product-img"><img src="northward-spirits-html/assets/product-vodka.jpg" alt="Cask No. 7 Craft Spirit" loading="lazy"/><div class="product-cat">Craft S[...]
-      <article class="product reveal"><div class="product-img"><img src="northward-spirits-html/assets/product-wine.jpg" alt="Okanagan Estate Reserve" loading="lazy"/><div class="product-cat">Wine</di[...]
+      <article class="product reveal"><div class="product-img"><img src="assets/product-vodka.jpg" alt="Polar Reserve Vodka" loading="lazy"/><div class="product-cat">Vodka</div></div><h3>Polar Reserve Vodka</h3><div class="tier">Tier A — from $14.20 / 750ml</div></article>
+      <article class="product reveal"><div class="product-img"><img src="assets/product-gin.jpg" alt="Coastline Botanical Gin" loading="lazy"/><div class="product-cat">Gin</div></div><h3>Coastline Botanical Gin</h3><div class="tier">Tier A — from $18.40 / 750ml</div></article>
+      <article class="product reveal"><div class="product-img"><img src="assets/product-craft.jpg" alt="Cask No. 7 Craft Spirit" loading="lazy"/><div class="product-cat">Craft Spirits</div></div><h3>Cask No. 7 Craft Spirit</h3><div class="tier">Tier S — from $32.90 / 750ml</div></article>
+      <article class="product reveal"><div class="product-img"><img src="assets/product-wine.jpg" alt="Okanagan Estate Reserve" loading="lazy"/><div class="product-cat">Wine</div></div><h3>Okanagan Estate Reserve</h3><div class="tier">Tier B — from $11.80 / 750ml</div></article>
     </div>
     <div style="margin-top:80px;text-align:center">
       <a href="#portal" style="display:inline-flex;align-items:center;gap:12px;font-size:13px;text-transform:uppercase;letter-spacing:.3em;color:var(--muted-foreground)">
@@ -242,7 +242,7 @@ footer{border-top:1px solid var(--border)}
     <div class="reveal">
       <div class="eyebrow">Partner Portal</div>
       <h2>A trade portal built for operators, not browsers.</h2>
-      <p style="margin-top:32px;font-size:18px;color:var(--muted-foreground);max-width:520px">Sign in once to manage your venues, replenishments, custom labels and invoices — with concierge support [...]
+      <p style="margin-top:32px;font-size:18px;color:var(--muted-foreground);max-width:520px">Sign in once to manage your venues, replenishments, custom labels and invoices — with concierge support from the Vancouver and Toronto teams.</p>
       <div class="benefits">
         <div class="benefit"><div class="num">01</div><div class="benefit-t">Bulk Order System</div><p>Configure pallets, mix-and-match SKUs, schedule recurring deliveries.</p></div>
         <div class="benefit"><div class="num">02</div><div class="benefit-t">Custom Labeling</div><p>Private-label runs for hotel groups & restaurant brands from 240 bottles.</p></div>
@@ -277,7 +277,7 @@ footer{border-top:1px solid var(--border)}
       <div>
         <div class="eyebrow">The network</div>
         <h2>From Vancouver HQ to a new home in Toronto.</h2>
-        <p style="margin-top:24px;color:var(--muted-foreground);max-width:520px">Two coasts. Five operational nodes. One uncompromising standard for handling, temperature control and on-time delivery.[...]
+        <p style="margin-top:24px;color:var(--muted-foreground);max-width:520px">Two coasts. Five operational nodes. One uncompromising standard for handling, temperature control and on-time delivery.</p>
       </div>
     </div>
     <div class="nodes">
